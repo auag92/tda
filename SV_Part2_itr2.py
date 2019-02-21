@@ -134,13 +134,16 @@ Image8_R= ripser(Img8, maxdim=0)['dgms']
 Image9_R= ripser(Img9, maxdim=0)['dgms']
 Image10_R= ripser(Img10, maxdim=0)['dgms']
 
-np.savetxt('Img1_R.txt',Image1_R)
-np.savetxt('Img2_R.txt',Image2_R)
-np.savetxt('Img3_R.txt',Image3_R)
-np.savetxt('Img4_R.txt',Image4_R)
-np.savetxt('Img5_R.txt',Image5_R)
-np.savetxt('Img6_R.txt',Image6_R)
-np.savetxt('Img7_R.txt',Image7_R)
-np.savetxt('Img8_R.txt',Image8_R)
-np.savetxt('Img9_R.txt',Image9_R)
-np.savetxt('Img10_R.txt',Image10_R)
+
+print(Image1_R.shape)
+
+np.save('Img1_R.npy',Image1_R)
+np.save('Img2_R.npy',Image2_R)
+np.save('Img3_R.npy',Image3_R)
+np.save('Img4_R.npy',Image4_R)
+np.save('Img5_R.npy',Image5_R)
+np.save('Img6_R.npy',Image6_R)
+np.save('Img7_R.npy',Image7_R)
+np.save('Img8_R.npy',Image8_R)
+np.save('Img9_R.npy',Image9_R)
+np.save('Img10_R.npy',Image10_R)
