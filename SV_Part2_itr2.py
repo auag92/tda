@@ -15,27 +15,27 @@ fnames = ["beetle-2.gif", "apple-5.gif", "butterfly-1.gif",
           "device6-14.gif", "pocket-5.gif", "jar-13.gif",
           "spring-18.gif"]
 
-Image1= plt.imread("images/beetle-2.gif")
+Image1= plt.imread("images/bottle-10.gif")
 Image2= plt.imread("images/apple-5.gif")
-Image3= plt.imread("images/butterfly-1.gif")
+Image3= plt.imread("images/cellular_phone-4.gif")
 Image4= plt.imread("images/cup-1.gif")
-Image5= plt.imread("images/crown-18.gif")
-Image6= plt.imread("images/device1-3.gif")
-Image7= plt.imread("images/device6-14.gif")
-Image8= plt.imread("images/pocket-5.gif")
-Image9= plt.imread("images/jar-13.gif")
-Image10= plt.imread("images/spring-18.gif")
+Image5= plt.imread("images/bottle-04.gif")
+Image6= plt.imread("images/classic-6.gif")
+Image7= plt.imread("images/classic-8.gif")
+Image8= plt.imread("images/classic-7.gif")
+Image9= plt.imread("images/classic-9.gif")
+Image10= plt.imread("images/classic-12.gif")
 
-Img1= Image1[:,:,0]+ Image1[:, :, 1]+ Image1[:, :, 2]
+Img1= Image1
 Img2= Image2
-Img3= Image3[:,:,0]+ Image3[:, :, 1]+ Image3[:, :, 2]
+Img3= Image3
 Img4= Image4
-Img5= Image5[:,:,0]+ Image5[:, :, 1]+ Image5[:, :, 2]
-Img6= Image6[:,:,0]+ Image6[:, :, 1]+ Image6[:, :, 2]
-Img7= Image7[:,:,0]+ Image7[:, :, 1]+ Image7[:, :, 2]
-Img8= Image8[:,:,0]+ Image8[:, :, 1]+ Image8[:, :, 2]
-Img9=Image9
-Img10=Image10
+Img5= Image5
+Img6= Image6
+Img7= Image7
+Img8= Image8
+Img9= Image9
+Img10= Image10
 
 
 from skimage.filters import roberts, sobel, scharr, prewitt
@@ -135,15 +135,13 @@ Image9_R= ripser(Img9, maxdim=0)['dgms']
 Image10_R= ripser(Img10, maxdim=0)['dgms']
 
 
-print(Image1_R.shape)
-
-np.save('Img1_R.npy',Image1_R)
-np.save('Img2_R.npy',Image2_R)
-np.save('Img3_R.npy',Image3_R)
-np.save('Img4_R.npy',Image4_R)
-np.save('Img5_R.npy',Image5_R)
-np.save('Img6_R.npy',Image6_R)
-np.save('Img7_R.npy',Image7_R)
-np.save('Img8_R.npy',Image8_R)
-np.save('Img9_R.npy',Image9_R)
-np.save('Img10_R.npy',Image10_R)
+np.savetxt('Img1_R.npy',Image1_R)
+np.savetxt('Img2_R.npy',Image2_R)
+np.savetxt('Img3_R.npy',Image3_R)
+np.savetxt('Img4_R.npy',Image4_R)
+np.savetxt('Img5_R.npy',Image5_R)
+np.savetxt('Img6_R.npy',Image6_R)
+np.savetxt('Img7_R.npy',Image7_R)
+np.savetxt('Img8_R.npy',Image8_R)
+np.savetxt('Img9_R.npy',Image9_R)
+np.savetxt('Img10_R.npy',Image10_R)
